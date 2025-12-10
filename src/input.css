@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #050505;
+    color: #e5e5e5;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- Moving Particles Background --- */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) translateX(0) opacity(0); }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-100vh) translateX(20px) opacity(0); }
+}
+
+/* --- NEW: Ambient Light Glow (Sentuhan Elegan) --- */
+/* Cahaya halus yang bergerak lambat di background */
+.ambient-light {
+    position: fixed;
+    border-radius: 50%;
+    z-index: -2; /* Di belakang partikel */
+    pointer-events: none;
+    filter: blur(20px); /* Blur tinggi agar sangat halus */
+}
+
+/* Cahaya 1 (Kiri Atas) */
+.ambient-light.top-light {
+    top: -10%;
+    left: -10%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0) 70%);
+    animation: glow-move 15s ease-in-out infinite alternate;
+}
+
+/* Cahaya 2 (Kanan Bawah) */
+.ambient-light.bottom-light {
+    bottom: -10%;
+    right: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0) 70%);
+    animation: glow-move-2 20s ease-in-out infinite alternate;
+}
+
+/* Animasi gerakan lambat (Bernafas) */
+@keyframes glow-move {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(5%, 5%) scale(1.1); }
+}
+@keyframes glow-move-2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-5%, -5%) scale(1.1); }
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav {
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+    transition: all 0.4s ease;
+}
+.glass-card:hover {
+    background: rgba(40, 40, 40, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Tab Active State */
+.tab-active {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 600;
+}
+
+.tab-inactive {
+    background: transparent;
+    color: #737373;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tab-inactive:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #050505; 
+}
+::-webkit-scrollbar-thumb {
+    background: #262626; 
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #404040; 
+}
+
+/* Fade Animation */
+.fade-in {
+    animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Infinite Horizontal Scroll */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+@keyframes scroll-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.scroller-container {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.scroller-track {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    animation: scroll 40s linear infinite;
+}
+
+.scroller-track.reverse {
+    animation-name: scroll-reverse;
+}
+
+.scroller-track:hover {
+    animation-play-state: paused;
+}
+
+.project-item {
+    flex-shrink: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(255,255,255,0.05);
+    background: #0a0a0a;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    border-color: rgba(255,255,255,0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8); 
+}
+
+/* Specific size for smaller photo items */
+.photo-item-small {
+     height: 12rem; /* h-48 */
+}
+
+@media (min-width: 768px) {
+    .photo-item-small {
+        height: 16rem; /* md:h-64 */
+    }
+}
+
+/* SKILL BAR STYLES */
+.skill-track {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 9999px;
+    height: 6px;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+}
+.skill-progress {
+    background-color: white;
+    height: 100%;
+    border-radius: 9999px;
+    width: 0%;
+    position: relative;
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: #050505;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}

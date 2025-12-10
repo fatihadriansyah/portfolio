@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Fatih Adriansyah | Creative Portfolio</title>
+    
+    <!-- Link ke Output CSS (Hasil Build Tailwind) -->
+    <link href="./dist/output.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased selection:bg-white selection:text-black">
+
+    <!-- Particles Background -->
+    <div class="particles-container">
+        <div class="particle" style="width: 4px; height: 4px; top: 10%; left: 20%; animation-duration: 25s; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 6px; height: 6px; top: 30%; left: 60%; animation-duration: 30s; animation-delay: -5s;"></div>
+        <div class="particle" style="width: 3px; height: 3px; top: 70%; left: 40%; animation-duration: 20s; animation-delay: -10s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 50%; left: 80%; animation-duration: 35s; animation-delay: -15s;"></div>
+        <div class="particle" style="width: 4px; height: 4px; top: 90%; left: 10%; animation-duration: 28s; animation-delay: -2s;"></div>
+         <div class="particle" style="width: 2px; height: 2px; top: 15%; left: 50%; animation-duration: 40s; animation-delay: -8s;"></div>
+         <div class="particle" style="width: 3px; height: 3px; top: 60%; left: 30%; animation-duration: 32s; animation-delay: -12s;"></div>
+    </div>
+
+    <!-- Ambient Glow Elements -->
+    <div class="ambient-light top-light"></div>
+    <div class="ambient-light bottom-light"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <span class="text-xl font-semibold tracking-widest text-white group-hover:opacity-70 transition">
+                        Fatih
+                    </span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-gray-400 hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#skills" class="text-gray-400 hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#education" class="text-gray-400 hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">Educations</a>
+                        <a href="#experience" class="text-gray-400 hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">Experiences</a>
+                        <a href="#projects" class="text-gray-400 hover:text-white transition px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                        <a href="#contact" class="px-5 py-2 rounded-full border border-white/20 hover:bg-white hover:text-black transition text-sm font-medium">Contact Me</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t-0 bg-black">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#skills" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#education" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Educations</a>
+                <a href="#experience" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experiences</a>
+                <a href="#projects" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative px-4 pt-20">
+        <div class="text-center max-w-4xl mx-auto z-10 reveal active">
+            <div class="mb-8 inline-block">
+                <span class="py-2 px-4 rounded-full border border-white/10 text-xs font-medium text-gray-400 tracking-widest uppercase">
+                    Portfolio
+                </span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-bold mb-8 tracking-tighter text-white">
+                Fatih Adriansyah
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            <span class="text-white font-medium">Photographer</span>, Video Editor, & Desainer.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="#projects" class="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition duration-300">
+                    View Projects
+                </a>
+                <a href="#contact" class="px-8 py-4 rounded-full border border-white/20 hover:bg-white/5 transition duration-300 flex items-center justify-center gap-2 text-white">
+                    My Contact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 px-4 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="glass rounded-none md:rounded-3xl p-8 md:p-16 reveal">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="relative group">
+                         <!-- Image Container -->
+                        <div class="relative w-full aspect-[4/5] overflow-hidden bg-neutral-900 grayscale group-hover:grayscale-0 transition duration-700 ease-in-out rounded-2xl">
+                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" alt="Profile Fatih" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-700 group-hover:scale-105">
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-widest mb-4">About Me</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold mb-6 text-white leading-tight">
+                            Visualizing Ideas, <br>Engineering Impact
+                        </h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-6 font-light">
+                            A proactive and creative Informatics Engineering student at Jakarta Global University with a strong foundation in photography, graphic design, and event management. Proven ability to lead teams and manage projects from concept to execution through extensive experience in university committees and as a volunteer for national-scale events. Eager to apply technical knowledge and creative skills in a challenging internship or project-based role that bridges technology and creative media
+                        </p>
+                        
+                        <!-- Minimalist Icons -->
+                        <div class="flex gap-8 border-t border-white/10 pt-8">
+                            <div class="text-center group cursor-default">
+                                <i data-lucide="camera" class="w-6 h-6 mx-auto mb-3 text-gray-500 group-hover:text-white transition"></i>
+                                <span class="text-xs font-medium text-gray-500 tracking-wider uppercase">Photo</span>
+                            </div>
+                            <div class="text-center group cursor-default">
+                                <i data-lucide="video" class="w-6 h-6 mx-auto mb-3 text-gray-500 group-hover:text-white transition"></i>
+                                <span class="text-xs font-medium text-gray-500 tracking-wider uppercase">Editing</span>
+                            </div>
+                            <div class="text-center group cursor-default">
+                                <i data-lucide="pen-tool" class="w-6 h-6 mx-auto mb-3 text-gray-500 group-hover:text-white transition"></i>
+                                <span class="text-xs font-medium text-gray-500 tracking-wider uppercase">Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILL SECTION -->
+    <section id="skills" class="py-24 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center justify-center gap-3 mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white uppercase tracking-wider">My Skill</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-12 reveal" id="skill-grid">
+                
+                <div class="skill-item" data-percent="98">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-lg font-medium text-white">Photography</span>
+                        <span class="text-sm font-bold text-white"><span class="counter">0</span>%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="90">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-lg font-medium text-white">Graphic Design</span>
+                        <span class="text-sm font-bold text-white"><span class="counter">0</span>%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="90">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-lg font-medium text-white">Lightroom</span>
+                        <span class="text-sm font-bold text-white"><span class="counter">0</span>%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="92">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-lg font-medium text-white">Canva & Figma</span>
+                        <span class="text-sm font-bold text-white"><span class="counter">0</span>%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="75">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-lg font-medium text-white">Video Editing</span>
+                        <span class="text-sm font-bold text-white"><span class="counter">0</span>%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item" data-percent="60">
+                    <div class="flex justify-between items-end mb-2">
+                        <span class="text-lg font-medium text-white">Photoshop & Ilustrator</span>
+                        <span class="text-sm font-bold text-white"><span class="counter">0</span>%</span>
+                    </div>
+                    <div class="skill-track">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-24 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center reveal text-white">
+                Educations
+            </h2>
+            
+            <div class="space-y-6 reveal">
+                <!-- Edu Item 1 -->
+                <div class="glass p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start glass-card group rounded-2xl">
+                    <div class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full group-hover:border-white/50 transition">
+                        <span class="text-white font-serif italic">01</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row justify-between mb-3 items-baseline">
+                            <h3 class="text-xl font-bold text-white group-hover:text-gray-200 transition">Jakarta Global University</h3>
+                            <span class="text-sm text-gray-500">2024 - Now</span>
+                        </div>
+                        <p class="text-base text-gray-300 font-medium mb-3">Bachelor of Informatics Engineering</p>
+                        <p class="text-gray-500 font-light leading-relaxed">Majoring in Informatics Engineering with a strong interest in digital creativity. Actively leading the Photography Dept. at the Multimedia Student Activity Unit</p>
+                    </div>
+                </div>
+
+                <!-- Edu Item 2 -->
+                <div class="glass p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start glass-card group rounded-2xl">
+                    <div class="w-12 h-12 flex items-center justify-center border border-white/10 rounded-full group-hover:border-white/50 transition">
+                         <span class="text-white font-serif italic">02</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row justify-between mb-3 items-baseline">
+                            <h3 class="text-xl font-bold text-white group-hover:text-gray-200 transition">SMA YAPEMRI Depok</h3>
+                            <span class="text-sm text-gray-500">2021 - 2024</span>
+                        </div>
+                        <p class="text-base text-gray-300 font-medium mb-3">Natural Sciences (IPA)</p>
+                        <p class="text-gray-500 font-light leading-relaxed">Built a strong foundation in analytical thinking, scientific principles, and logic through the Natural Sciences program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Experiences</h2>
+                
+                <!-- Tab Controls -->
+                <div class="flex p-1 bg-neutral-900/50 rounded-lg border border-white/5 backdrop-blur-sm">
+                    <button onclick="switchTab('org')" id="btn-org" class="px-6 py-2 rounded-md transition-all duration-300 text-sm tab-active">
+                        Organisasi
+                    </button>
+                    <button onclick="switchTab('vol')" id="btn-vol" class="px-6 py-2 rounded-md transition-all duration-300 text-sm tab-inactive">
+                        Volunteer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="min-h-[400px] reveal">
+                
+                <!-- 1. Organization Content -->
+                <div id="content-org" class="space-y-4 fade-in">
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Head of Department Photography</h4>
+                                <p class="text-sm text-gray-400">Multimedia JGU</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">Oct 2025 - Now</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Setting the direction and goals for member development and departmental projects, Develop and deliver weekly educational workshops, presenting materials on various photography techniques and concepts to all members, and more</p>
+                    </div>
+                    
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Staff of Department Photography</h4>
+                                <p class="text-sm text-gray-400">Multimedia JGU</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">Oct 2024 - Oct 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Actively participated in the Photography Department, contributing to various organizational projects and activities, Assisted in the documentation of key university events on behalf of UKM Multimedia, and more</p>
+                    </div>
+
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Staff of Media and Communication Derpartment</h4>
+                                <p class="text-sm text-gray-400">Himpunan Mahasiswa Teknik Informartika</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">Oct 2024 - Now</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Actively involved in the Media and Communication (Medinfo) division, responsible for managing the organization's external image, Documented various organizational events through photography to create a visual archive and for publication materials, and more</p>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button id="btn-load-org" class="text-sm text-white border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition">
+                            Load More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Volunteer Content -->
+                <div id="content-vol" class="hidden space-y-4 fade-in">
+                    <!-- Item 1 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Crowd Control Division</h4>
+                                <p class="text-sm text-gray-400">Animeverse Festival 2025</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">7 Dec 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Managed the ticketing queue and crowd flow, ensuring efficient ticket validation, wristband application, and access control for visitors.</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Documentation Team</h4>
+                                <p class="text-sm text-gray-400">Conferences on Indonesia Foreign Policy</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">29 Nov 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Captured exclusive moments in the VIP Lounge, documenting high-profile figures including Ministers and Ambassadors.</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Documentation Team</h4>
+                                <p class="text-sm text-gray-400">ADGI Design Week 2025</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">19 & 23 Nov 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Documented the visual journey of the event, covering both the opening and closing ceremonies for the design exhibition.</p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Ticketing Staff</h4>
+                                <p class="text-sm text-gray-400">Comic Frontier 21</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">15 - 16 Nov 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Managed visitor flow at the ticketing area, assisted with ticket redemption, and documented the queueing atmosphere.</p>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Documentation team</h4>
+                                <p class="text-sm text-gray-400">Connect 4 Change Summit 2025</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">21 Oct 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Served as the dedicated photographer for the Impact Room, capturing key moments and audience engagement during sessions.</p>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Documentation Team</h4>
+                                <p class="text-sm text-gray-400">Temu Pendidik Nusantara 12</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">11 - 12 Oct 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Documented activities at the RSG Stage, capturing the interactions of committees, volunteers, and speakers.</p>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Documentation Team</h4>
+                                <p class="text-sm text-gray-400">ASEAN for the People Conferences</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">4 - 5 Oct 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Captured moments across multiple venues and photographed prominent figures such as Anies Baswedan and Sandiaga Uno.</p>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Security & Guard Control Crew</h4>
+                                <p class="text-sm text-gray-400">Chibicon Jakarta 2025</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">2 - 3 Aug 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Stationed at the entrance gate to manage security checks, ticket verification, and visitor queuing lines.</p>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Documentation Team</h4>
+                                <p class="text-sm text-gray-400">Otakuwave Vol. 2</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">27 Jul 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Responsible for documenting the Main Stage performances, ticketing area, and general crowd atmosphere at the venue.</p>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Documentation Team</h4>
+                                <p class="text-sm text-gray-400">Indonesia Net Zero Summit 2025</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">26 Jul 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Served as the official photographer for the main ballroom, capturing international speakers and key summit moments..</p>
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Ticketing</h4>
+                                <p class="text-sm text-gray-400">Comic Frontier XX</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">24 - 25 May 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Assisted with physical ticket wristband application, managed redemption booths, and directed visitor traffic.</p>
+                    </div>
+
+                    <div class="glass p-8 group hover:bg-neutral-900 transition border border-white/5 border-l-2 border-l-white/50 rounded-2xl">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Liaison Officer </h4>
+                                <p class="text-sm text-gray-400">COSUFESTO 2023</p>
+                            </div>
+                            <span class="text-xs text-gray-600 border border-gray-800 px-2 py-1 rounded">24 - 25 May 2025</span>
+                        </div>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed">Managed Guest Star schedules and needs, ensuring security in the VIP room and preventing miscommunication during the event..</p>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button id="btn-load-vol" class="text-sm text-white border border-white/20 px-6 py-2 rounded-full hover:bg-white hover:text-black transition">
+                            Load More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Dark Infinite Scroll) -->
+    <section id="projects" class="py-24 px-0 bg-[#050505] border-t border-white/5">
+        <div class="max-w-full overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold text-white">My Projects</h2>
+                <p class="text-gray-500 mt-4 max-w-lg">Beyond pixels and frames. An archive of stories told through my lens and design explorations</p>
+            </div>
+
+            <div class="space-y-32 reveal">
+                
+                <!-- 1. Photography Section -->
+                <div>
+                    <div class="max-w-7xl mx-auto px-4 mb-8 flex items-center gap-4">
+                        <span class="h-px w-8 bg-white/30"></span>
+                        <h3 class="text-xl font-medium text-white tracking-widest uppercase">Photography</h3>
+                    </div>
+                    
+                    <!-- Row 1: Normal Scroll -->
+                    <div class="scroller-container mb-4">
+                        <div class="scroller-track" style="animation-duration: 50s;">
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC03020.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC03001.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC03289 (1).jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC04595 (1).jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06086.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06204 (1).jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06237.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <!-- DUPLICATE FOR LOOP -->
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC03020.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC03001.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC03289 (1).jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC04595 (1).jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06086.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06204 (1).jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06237.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2: Reverse Scroll -->
+                    <div class="scroller-container">
+                        <div class="scroller-track reverse" style="animation-duration: 55s;">
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\IMG_20250831_231920.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                             <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC09730.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\DSC09979.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06254.JPG" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\DSC09645.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\IMG_20251126_144725.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\DSC03698.JPG" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <!-- DUPLICATE FOR LOOP -->
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\IMG_20250831_231920.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                             <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC09730.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\DSC09979.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\DSC06254.JPG" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\DSC09645.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-[3/4]">
+                                <img src="C:\Download\Portfolio\img\IMG_20251126_144725.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 photo-item-small aspect-video">
+                                <img src="C:\Download\Portfolio\img\DSC03698.JPG" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. Video Editing Section (UPDATED FOR VERTICAL VIDEOS - NORMAL SIZE) -->
+                <div>
+                    <div class="max-w-7xl mx-auto px-4 mb-8 flex items-center gap-4">
+                        <span class="h-px w-8 bg-white/30"></span>
+                        <h3 class="text-xl font-medium text-white tracking-widest uppercase">Video Editing</h3>
+                    </div>
+
+                     <div class="scroller-container">
+                        <div class="scroller-track" style="animation-duration: 60s;"> 
+                            <!-- Video 1 -->
+                            <!-- Menggunakan class 'photo-item-small' agar tingginya sama dengan foto (h-48 mobile / h-64 desktop) -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031 (1)(1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 2 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 3 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1105 (1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 4 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Bag Spa.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 5 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Retouch(2).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- DUPLICATE FOR INFINITE SCROLL -->
+                            <!-- Video 1 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031 (1)(1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 2 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 3 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1105 (1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 4 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Bag Spa.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 5 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Retouch(2).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031 (1)(1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 2 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 3 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1105 (1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 4 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Bag Spa.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 5 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Retouch(2).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- DUPLICATE FOR INFINITE SCROLL -->
+                            <!-- Video 1 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031 (1)(1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 2 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1031.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 3 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/1105 (1).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+
+                            <!-- Video 4 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Bag Spa.mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                            
+                            <!-- Video 5 -->
+                            <div class="project-item p-0 photo-item-small aspect-[9/16] bg-black">
+                                <video src="./vid/Retouch(2).mp4" class="w-full h-full object-cover" autoplay muted loop playsinline></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Design Section -->
+                <div>
+                    <div class="max-w-7xl mx-auto px-4 mb-8 flex items-center gap-4">
+                        <span class="h-px w-8 bg-white/30"></span>
+                        <h3 class="text-xl font-medium text-white tracking-widest uppercase">Graphic Design</h3>
+                    </div>
+
+                     <div class="scroller-container">
+                        <div class="scroller-track" style="animation-duration: 50s;">
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\GYJ Birthday.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Isa Almasih (1).png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Lebaran 2025.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Nyepi.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Paskah.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\GYJ Birthday.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Isa Almasih (1).png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Lebaran 2025.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Nyepi.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Paskah.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\GYJ Birthday.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Isa Almasih (1).png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Lebaran 2025.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Nyepi.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                            <div class="project-item group p-0 h-72 md:h-96 aspect-[4/5] bg-neutral-900">
+                                <img src="C:\Download\Portfolio\des\Paskah.png" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="contact" class="py-24 px-4 relative border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-white">Let's Work Together</h2>
+            <p class="text-lg text-gray-500 mb-12 max-w-xl mx-auto font-light">
+                Turning abstract ideas into visual reality. Available for freelance projects and creative collaborations.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+                <a href="mailto:muhammadfatih1629@gmail.com" class="px-8 py-3 bg-white text-black font-semibold hover:bg-gray-200 transition duration-300">
+                    Email Me
+                </a>
+                <a href="https://www.instagram.com/fatih.adriansyah/" class="px-8 py-3 border border-white/20 text-white hover:bg-white/5 transition duration-300">
+                    Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/muhammad-fatih-adriansyah-720095342/" class="px-8 py-3 border border-white/20 text-white hover:bg-white/5 transition duration-300">
+                    LinkedIn
+                </a>
+            </div>
+
+            <div class="text-xs text-gray-600 tracking-widest uppercase">
+                &copy; 2024 Muhammad Fatih Adriansyah.
+            </div>
+        </div>
+    </section>
+
+    <!-- Javascript -->
+    <!-- Memanggil Script External -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="./script.js"></script>
+    
+    <!-- Initialize Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>"
